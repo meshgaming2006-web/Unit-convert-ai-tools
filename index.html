@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ AI Unit Converter</h1>
+    <nav>
+      <button class="tab active" data-tab="length">Length</button>
+      <button class="tab" data-tab="temperature">Temperature</button>
+      <button class="tab" data-tab="weight">Weight</button>
+      <button class="tab" data-tab="volume">Volume</button>
+      <button class="tab" data-tab="area">Area</button>
+      <button class="tab" data-tab="time">Time</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="converter-box">
+      <label>Amount</label>
+      <input type="number" id="amount" value="1">
+
+      <div class="selectors">
+        <select id="fromUnit"></select>
+        <select id="toUnit"></select>
+      </div>
+
+      <button id="convertBtn">Convert</button>
+
+      <div id="result">Result will appear here...</div>
+    </section>
+
+    <section id="shortcuts">
+      <h2>Quick Conversions</h2>
+      <div class="grid">
+        <button class="shortcut" data-from="cm" data-to="in">cm ↔ inch</button>
+        <button class="shortcut" data-from="kg" data-to="lb">kg ↔ lbs</button>
+        <button class="shortcut" data-from="c" data-to="f">Celsius ↔ Fahrenheit</button>
+        <button class="shortcut" data-from="km" data-to="mi">km ↔ miles</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 AI Converter • Built with HTML, CSS, JS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
