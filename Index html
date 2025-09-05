@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnitConvertAIPro - Free Online Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ UnitConvertAIPro</h1>
+  </header>
+
+  <main>
+    <!-- Ads Placeholder -->
+    <div class="ads">Ad Placeholder (Add Adsense Here)</div>
+
+    <!-- Converter Box -->
+    <section class="converter">
+      <h2>Unit Converter</h2>
+      <input type="number" id="amount" placeholder="Enter value">
+      <select id="fromUnit">
+        <option value="cm">Centimeter</option>
+        <option value="inch">Inch</option>
+        <option value="kg">Kilogram</option>
+        <option value="lbs">Pound</option>
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="km">Kilometer</option>
+        <option value="mile">Mile</option>
+      </select>
+      <select id="toUnit">
+        <option value="inch">Inch</option>
+        <option value="cm">Centimeter</option>
+        <option value="lbs">Pound</option>
+        <option value="kg">Kilogram</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+        <option value="mile">Mile</option>
+        <option value="km">Kilometer</option>
+      </select>
+      <button onclick="convert()">Convert</button>
+
+      <p id="result">Result will appear here</p>
+    </section>
+
+    <!-- Quick Conversions -->
+    <section class="quick">
+      <h3>Quick Conversions</h3>
+      <div class="buttons">
+        <button onclick="quickConvert('cm','inch')">cm ↔ inch</button>
+        <button onclick="quickConvert('kg','lbs')">kg ↔ lbs</button>
+        <button onclick="quickConvert('celsius','fahrenheit')">°C ↔ °F</button>
+        <button onclick="quickConvert('km','mile')">km ↔ miles</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 UnitConvertAIPro • Fast, Free, No-Login Unit Converter</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
