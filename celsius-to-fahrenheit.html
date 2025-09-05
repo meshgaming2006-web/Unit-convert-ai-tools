@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celsius to Fahrenheit Converter – Free Online Temperature Tool</title>
+  <meta name="description" content="Convert Celsius (°C) to Fahrenheit (°F) instantly with our free tool." />
+  <link rel="canonical" href="https://unitconvertaipro.vercel.app/celsius-to-fahrenheit.html"/>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics (replace G-XXXXXXXX when ready) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config','G-XXXXXXXX');
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is 25\u00b0C in Fahrenheit?", "acceptedAnswer": {"@type": "Answer", "text": "25\u00b0C = 77\u00b0F."}}, {"@type": "Question", "name": "How do you convert Celsius to Fahrenheit?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply \u00b0C by 9/5 and add 32."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Celsius to Fahrenheit Converter \u2013 Free Online Temperature Tool", "description": "Convert Celsius (\u00b0C) to Fahrenheit (\u00b0F) instantly with our free tool.", "url": "https://unitconvertaipro.vercel.app/celsius-to-fahrenheit.html"}</script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <div class="brand"><div class="logo">AI</div><div>
+        <div class="h1" style="font-size:18px;margin:0">UnitConvertaipro</div>
+        <div class="muted" style="font-size:12px">Fast, free, no-login unit converters</div>
+      </div></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#formula">Formula</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top:14px">
+    <div class="grid" style="grid-template-columns:1fr;gap:16px">
+      <section class="card">
+        <h1 class="h1">Celsius to Fahrenheit Converter</h1>
+        <p class="muted">Convert Celsius (°C) to Fahrenheit (°F) instantly with our free tool.</p>
+        <div class="ads">Ad placeholder (add AdSense code later)</div>
+        <div class="row" style="margin:8px 0">
+          <input id="inputValue" class="input" type="number" inputmode="decimal" placeholder="Enter Celsius (°C) value">
+          <button id="convertBtn" class="btn primary">Convert</button>
+          <button id="copyBtn" class="btn">Copy</button>
+        </div>
+        <div id="output" class="result"></div>
+        <hr/>
+        <h2 class="h2" id="formula">Formula</h2>
+        <p><strong>Fahrenheit (°F)</strong> from <strong>Celsius (°C)</strong>: °F = (°C × 9/5) + 32</p>
+        <h2 class="h2">Quick Table</h2>
+        <table class="table">
+          <thead><tr><th>Celsius (°C)</th><th>Fahrenheit (°F)</th></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+
+      <aside class="card">
+        <h3 class="h2">Popular Converters</h3>
+        <div id="toolLinks" class="list"></div>
+      </aside>
+    </div>
+
+    <section class="card" id="faq" style="margin-top:16px">
+      <h2 class="h2">FAQ</h2>
+      <p><strong>What is 25°C in Fahrenheit?</strong><br>25°C = 77°F.</p><p><strong>How do you convert Celsius to Fahrenheit?</strong><br>Multiply °C by 9/5 and add 32.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 UnitConvertaipro • Built for speed</footer>
+
+  <script src="script.js"></script>
+  <script>
+    // bind
+    const binder = bindSimpleTool({
+      inputId:'inputValue', outputId:'output', from:'Celsius (°C)', to:'Fahrenheit (°F)', op: Conv['cToF']
+    });
+    renderToolLinks('toolLinks');
+  </script>
+</body>
+</html>

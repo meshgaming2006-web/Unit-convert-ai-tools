@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Convert CM to Inches – Fast & Free Online Tool</title>
+  <meta name="description" content="Convert centimeters (cm) to inches instantly with our free tool. Accurate, simple, and perfect for daily use." />
+  <link rel="canonical" href="https://unitconvertaipro.vercel.app/cm-to-inch.html"/>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics (replace G-XXXXXXXX when ready) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config','G-XXXXXXXX');
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many inches are in 10 cm?", "acceptedAnswer": {"@type": "Answer", "text": "10 cm \u2248 3.937 in."}}, {"@type": "Question", "name": "What is the formula to convert cm to inches?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply centimeters by 0.3937007874 to get inches."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Convert CM to Inches \u2013 Fast & Free Online Tool", "description": "Convert centimeters (cm) to inches instantly with our free tool. Accurate, simple, and perfect for daily use.", "url": "https://unitconvertaipro.vercel.app/cm-to-inch.html"}</script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <div class="brand"><div class="logo">AI</div><div>
+        <div class="h1" style="font-size:18px;margin:0">UnitConvertaipro</div>
+        <div class="muted" style="font-size:12px">Fast, free, no-login unit converters</div>
+      </div></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#formula">Formula</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top:14px">
+    <div class="grid" style="grid-template-columns:1fr;gap:16px">
+      <section class="card">
+        <h1 class="h1">CM to Inches Converter</h1>
+        <p class="muted">Convert centimeters (cm) to inches instantly with our free tool. Accurate, simple, and perfect for daily use.</p>
+        <div class="ads">Ad placeholder (add AdSense code later)</div>
+        <div class="row" style="margin:8px 0">
+          <input id="inputValue" class="input" type="number" inputmode="decimal" placeholder="Enter Centimeters (cm) value">
+          <button id="convertBtn" class="btn primary">Convert</button>
+          <button id="copyBtn" class="btn">Copy</button>
+        </div>
+        <div id="output" class="result"></div>
+        <hr/>
+        <h2 class="h2" id="formula">Formula</h2>
+        <p><strong>Inches (in)</strong> from <strong>Centimeters (cm)</strong>: in = cm × 0.3937007874</p>
+        <h2 class="h2">Quick Table</h2>
+        <table class="table">
+          <thead><tr><th>Centimeters (cm)</th><th>Inches (in)</th></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+
+      <aside class="card">
+        <h3 class="h2">Popular Converters</h3>
+        <div id="toolLinks" class="list"></div>
+      </aside>
+    </div>
+
+    <section class="card" id="faq" style="margin-top:16px">
+      <h2 class="h2">FAQ</h2>
+      <p><strong>How many inches are in 10 cm?</strong><br>10 cm ≈ 3.937 in.</p><p><strong>What is the formula to convert cm to inches?</strong><br>Multiply centimeters by 0.3937007874 to get inches.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 UnitConvertaipro • Built for speed</footer>
+
+  <script src="script.js"></script>
+  <script>
+    // bind
+    const binder = bindSimpleTool({
+      inputId:'inputValue', outputId:'output', from:'Centimeters (cm)', to:'Inches (in)', op: Conv['cmToIn']
+    });
+    renderToolLinks('toolLinks');
+  </script>
+</body>
+</html>
