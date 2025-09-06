@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://unitconvertaipro.vercel.app/sitemap.xml
