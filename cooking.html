@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cooking Volume Converter | UnitConverterAIPro</title>
+<meta name="description" content="Teaspoon, tablespoon, cups, mL, L.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/cooking.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Cooking Volume Converter</h2><p>Teaspoon, tablespoon, cups, mL, L.</p></div>
+<div class="card">
+  <div class="row">
+    <div>
+      <label>From</label>
+      <select id="from"><option value="mL">Milliliter (mL)</option>
+<option value="tsp">Teaspoon (tsp)</option>
+<option value="tbsp">Tablespoon (tbsp)</option>
+<option value="cup">Cup (US)</option>
+<option value="L">Liter (L)</option>
+<option value="floz">Fluid ounce (US fl oz)</option></select>
+    </div>
+    <div>
+      <label>To</label>
+      <select id="to"><option value="mL">Milliliter (mL)</option>
+<option value="tsp">Teaspoon (tsp)</option>
+<option value="tbsp">Tablespoon (tbsp)</option>
+<option value="cup">Cup (US)</option>
+<option value="L">Liter (L)</option>
+<option value="floz">Fluid ounce (US fl oz)</option></select>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <input id="val" class="input" type="number" placeholder="Enter value">
+    <input id="res" class="input" type="text" placeholder="Result" readonly>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <button class="btn" id="swap">Swap</button>
+    <button id="copyBtn">Copy Result</button>
+  </div>
+</div>
+<script>
+const MAP = {"mL": 1, "tsp": 4.92892159375, "tbsp": 14.78676478125, "cup": 236.5882365, "L": 1000, "floz": 29.5735295625};
+const from = document.getElementById('from');
+const to = document.getElementById('to');
+const val = document.getElementById('val');
+const res = document.getElementById('res');
+from.value = "cup"; to.value = "mL";
+function calc(){ const v = parseFloat(val.value); if(isNaN(v)){ res.value=""; return; }
+  const out = convertLinear(v, MAP, from.value, to.value); res.value = fmt(out); }
+['change','input'].forEach(ev=>from.addEventListener(ev,calc));
+['change','input'].forEach(ev=>to.addEventListener(ev,calc));
+val.addEventListener('input',calc);
+document.getElementById('swap').addEventListener('click', ()=>{ const a=from.value; from.value=to.value; to.value=a; calc(); });
+document.getElementById('copyBtn').addEventListener('click', ()=> copy(res.value));
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

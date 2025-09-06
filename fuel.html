@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fuel Economy Converter | UnitConverterAIPro</title>
+<meta name="description" content="MPG (US), L/100km, km/L.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/fuel.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Fuel Economy</h2><p>MPG (US), L/100km, km/L.</p></div>
+<div class="card">
+  <div class="row">
+    <div><label>From</label><select id="from"><option>mpg</option><option>L100</option><option>kmpl</option></select></div>
+    <div><label>To</label><select id="to"><option>mpg</option><option>L100</option><option>kmpl</option></select></div>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <input id="val" class="input" type="number" placeholder="Enter value">
+    <input id="res" class="input" type="text" placeholder="Result" readonly>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <button class="btn" id="swap">Swap</button>
+    <button id="copyBtn">Copy Result</button>
+  </div>
+</div>
+<script>
+const from=document.getElementById('from'); const to=document.getElementById('to');
+const val=document.getElementById('val'); const res=document.getElementById('res');
+from.value='mpg'; to.value='L100';
+function calc(){ const v=parseFloat(val.value); if(isNaN(v)){ res.value=''; return;}
+  res.value = fmt(convertFuel(v, from.value, to.value)); }
+['change','input'].forEach(e=>from.addEventListener(e,calc));
+['change','input'].forEach(e=>to.addEventListener(e,calc));
+val.addEventListener('input',calc);
+document.getElementById('swap').addEventListener('click', ()=>{ const a=from.value; from.value=to.value; to.value=a; calc(); });
+document.getElementById('copyBtn').addEventListener('click', ()=> copy(res.value));
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

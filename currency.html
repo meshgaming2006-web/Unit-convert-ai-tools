@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Currency Converter (USD) | UnitConverterAIPro</title>
+<meta name="description" content="Free live exchange rates powered by exchangerate.host.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/currency.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Currency Converter (Live)</h2><p>Fetches live rates. Works best with USD base.</p></div>
+<div class="card">
+  <div class="row">
+    <div><label>From</label><select id="from"></select></div>
+    <div><label>To</label><select id="to"></select></div>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <input id="val" class="input" type="number" placeholder="Amount">
+    <input id="res" class="input" type="text" placeholder="Result" readonly>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <button class="btn" id="refresh">Refresh Rates</button>
+    <div id="stamp" class="notice"></div>
+  </div>
+</div>
+<script>
+const from = document.getElementById('from');
+const to = document.getElementById('to');
+const val = document.getElementById('val');
+const res = document.getElementById('res');
+const stamp = document.getElementById('stamp');
+function fill(codes){ from.innerHTML=codes.map(c=>`<option>${c}</option>`).join(''); to.innerHTML=from.innerHTML; from.value='USD'; to.value='EUR'; }
+async function init(){ await loadRates('USD'); const codes=Object.keys(FX.rates).concat(FX.base).sort(); if(codes.length===0){ fill(['USD','EUR','INR','GBP','JPY']); } else fill(codes); stamp.textContent = FX.date ? `Rates ${FX.base} • ${FX.date}` : 'Rates unavailable'; }
+init();
+function calc(){ const v = parseFloat(val.value); if(isNaN(v)){ res.value=''; return;} res.value = fmt(convertFX(v, from.value, to.value)); }
+['change','input'].forEach(e=>from.addEventListener(e,calc));
+['change','input'].forEach(e=>to.addEventListener(e,calc));
+val.addEventListener('input',calc);
+document.getElementById('refresh').addEventListener('click', async ()=>{ await loadRates(from.value||'USD'); stamp.textContent = FX.date ? `Rates ${FX.base} • ${FX.date}` : 'Rates unavailable'; calc(); });
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

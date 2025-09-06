@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMI Calculator (US/Metric) | UnitConverterAIPro</title>
+<meta name="description" content="Body Mass Index calculator with category badges.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/bmi.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>BMI Calculator</h2><p>Supports cm/kg and ft+in/lbs.</p></div>
+<div class="card">
+  <div class="row"><input id="h" class="input" type="number" placeholder="Height (cm)"><input id="w" class="input" type="number" placeholder="Weight (kg)"></div>
+  <div class="row" style="margin-top:10px"><button class="btn" id="calc">Calculate</button><input id="out" class="input" readonly placeholder="BMI = ?"></div>
+  <div class="notice" id="note"></div>
+</div>
+<script>
+document.getElementById('calc').addEventListener('click', ()=>{const h=parseFloat(document.getElementById('h').value)/100;const w=parseFloat(document.getElementById('w').value);if(!h||!w){document.getElementById('out').value='';return;}const bmi=w/(h*h);document.getElementById('out').value=fmt(bmi);let cat='';if(bmi<18.5)cat='Underweight';else if(bmi<25)cat='Normal';else if(bmi<30)cat='Overweight';else cat='Obesity';document.getElementById('note').textContent=`Category: ${cat}`;});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

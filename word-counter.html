@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Counter | UnitConverterAIPro</title>
+<meta name="description" content="Count words, characters & reading time.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/word-counter.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Word Counter</h2><p>Counts words, characters, sentences, and estimated reading time.</p></div>
+<div class="card">
+  <textarea id="t" rows="8" placeholder="Start typing here..."></textarea>
+  <table class="table">
+    <tr><th>Words</th><td id="w">0</td></tr>
+    <tr><th>Characters</th><td id="c">0</td></tr>
+    <tr><th>Sentences</th><td id="s">0</td></tr>
+    <tr><th>Reading Time</th><td id="r">0 min</td></tr>
+  </table>
+</div>
+<script>
+const t=$('#t'),w=$('#w'),c=$('#c'),s=$('#s'),r=$('#r');
+t.addEventListener('input',()=>{const text=t.value.trim();const words=text?text.split(/\s+/).length:0;const chars=text.length;const sentences=text?(text.match(/[.!?]+/g)||[]).length:0;const minutes=Math.ceil(words/200);w.textContent=words;c.textContent=chars;s.textContent=sentences;r.textContent=`${minutes} min`;});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Random Number Generator | UnitConverterAIPro</title>
+<meta name="description" content="Generate a random number in any range.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/random-number.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Random Number Generator</h2><p>Pick a number between min and max.</p></div>
+<div class="card">
+  <div class="row"><input id="min" class="input" type="number" value="1" placeholder="Min"><input id="max" class="input" type="number" value="100" placeholder="Max"></div>
+  <div class="row" style="margin-top:10px"><button class="btn" id="go">Generate</button><input id="out" class="input" readonly></div>
+</div>
+<script>
+document.getElementById('go').addEventListener('click',()=>{const a=+document.getElementById('min').value,b=+document.getElementById('max').value;const n=Math.floor(Math.random()*(b-a+1))+a;document.getElementById('out').value=n;});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

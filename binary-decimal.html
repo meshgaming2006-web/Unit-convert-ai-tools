@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Binary to Decimal Converter | UnitConverterAIPro</title>
+<meta name="description" content="Quick binary ⇄ decimal conversion.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/binary-decimal.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Binary ⇄ Decimal</h2><p>Convert base-2 to base-10 and back.</p></div>
+<div class="card">
+  <div class="row"><input id="bin" class="input" placeholder="Binary e.g. 1011"><input id="dec" class="input" placeholder="Decimal e.g. 11"></div>
+</div>
+<script>
+$('#bin').addEventListener('input',e=>{const v=e.target.value.replace(/[^01]/g,'');e.target.value=v;$('#dec').value=v?parseInt(v,2):'';});
+$('#dec').addEventListener('input',e=>{const n=parseInt(e.target.value||'',10);$('#bin').value=isNaN(n)?'':n.toString(2);});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

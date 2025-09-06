@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Age Calculator | UnitConverterAIPro</title>
+<meta name="description" content="Find exact age in years, months, days.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/age.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Age Calculator</h2><p>Exact age from date of birth.</p></div>
+<div class="card">
+  <div class="row"><input id="dob" class="input" type="date"><input id="out" class="input" readonly placeholder="Your age"></div>
+  <button class="btn" id="calc" style="margin-top:10px">Calculate</button>
+</div>
+<script>
+document.getElementById('calc').addEventListener('click', ()=>{const d=new Date(document.getElementById('dob').value);if(!d.getTime()){document.getElementById('out').value='';return;}const now=new Date();let years=now.getFullYear()-d.getFullYear();let months=now.getMonth()-d.getMonth();let days=now.getDate()-d.getDate();if(days<0){months--;days+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}if(months<0){years--;months+=12;}document.getElementById('out').value=`${years} years, ${months} months, ${days} days`;});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>

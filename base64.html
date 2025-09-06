@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 Encode/Decode | UnitConverterAIPro</title>
+<meta name="description" content="Convert text to/from Base64.">
+<meta name="keywords" content="unit converter, online unit converter, cm to inch, kg to lbs, temperature converter, currency converter, calculator tools, USA, free tools, no login">
+<link rel="canonical" href="https://your-domain/tools/base64.html">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "UnitConverterAIPro", "url": "https://unitconverteraipro.example/", "potentialAction": {"@type": "SearchAction", "target": "https://unitconverteraipro.example/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<div class="nav"><div class="nav-inner container">
+  <div class="brand"><div class="badge">AI</div><h1>UnitConverterAIPro</h1></div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</div></div>
+<div class="container">
+<div class="hero"><h2>Base64 Encode / Decode</h2><p>Quickly encode or decode Base64 text.</p></div>
+<div class="card">
+  <textarea id="t" rows="8" placeholder="Paste text or Base64..."></textarea>
+  <div class="row" style="margin-top:10px"><button class="btn" id="enc">Encode</button><button id="dec">Decode</button></div>
+</div>
+<script>
+const t=$('#t');$('#enc').addEventListener('click',()=>{t.value=btoa(unescape(encodeURIComponent(t.value)))});$('#dec').addEventListener('click',()=>{try{t.value=decodeURIComponent(escape(atob(t.value)))}catch(e){alert('Invalid Base64')}});
+</script>
+
+</div>
+<div class="container footer">
+  <div>© <span id="year">2025</span> UnitConverterAIPro • Fast, free, no-login tools.</div>
+  <div class="notice">Some tools (like currency rates) require internet connectivity.</div>
+</div>
+</body></html>
